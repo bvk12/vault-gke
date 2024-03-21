@@ -1,4 +1,4 @@
 defaultVaultConnection:
   enabled: true
-  address: "http://vault-internal.vault.svc.cluster.local:8200"
+  address: "http://34.28.130.84:8200"
   skipTLSVerify: false

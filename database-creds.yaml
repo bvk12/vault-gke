@@ -6,10 +6,10 @@ metadata:
 spec:
   vaultAuthRef: static-auth
   mount: database
-  path: creds/fakeapp-role
+  path: fakeapp/mysecret
   destination:
     create: true
-    name: postgres
+    name: mysecret
   rolloutRestartTargets:
   - kind: Deployment
     name: fakeapp
