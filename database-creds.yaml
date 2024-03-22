@@ -1,0 +1,15 @@
+apiVersion: secrets.hashicorp.com/v1beta1
+kind: VaultDynamicSecret
+metadata:
+  namespace: fakeapp
+  name: database-creds
+spec:
+  vaultAuthRef: static-auth
+  mount: database
+  path: fakeapp/mysecret
+  destination:
+    create: true
+    name: mysecret
+  rolloutRestartTargets:
+  - kind: Deployment
+    name: fakeapp
